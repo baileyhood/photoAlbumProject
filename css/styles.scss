@@ -1,0 +1,149 @@
+//GENERAL
+body {
+  height: 100%;
+}
+
+
+//HOMEPAGE
+.home-page {
+  header {
+    background-color: lightgrey;
+  }
+  h1 {
+    text-align: center;
+    margin: 0;
+    padding: 47px 0;
+  }
+}
+.home-wrapper {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 83%;
+
+   ul{
+     margin: 0;
+     padding: 0;
+   }
+   li {
+     list-style-type: none;
+     width: 30%;
+     height: 225px;
+     background-color: lightgrey;
+     display: inline-block;
+     margin-right: 4.5%;
+     margin-bottom: 45px;
+   }
+   li:nth-child(3) {
+     margin-right: 0;
+   }
+   li:nth-child(6) {
+     margin-right: 0;
+   }
+   .album-image-container {
+     height: 78%;
+   }
+   h3 {
+     text-align: center;
+     background-color: black;
+     color: white;
+     margin: 0;
+     padding: 15px 0;
+
+   }
+}
+//ALBUM PAGE
+.album-page {
+  display: none;
+}
+aside {
+  background-color: lightgrey;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 250px;
+  height: 100%;
+  float: left;
+  nav {
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 40%;
+      }
+      li {
+        background-color: grey;
+        height: 45px;
+        margin-bottom: 25px;
+      }
+      h4 {
+        text-align: center;
+        margin: 0;
+      }
+}
+}
+  .album-wrapper {
+    padding-left: 447px;
+      ul {
+        margin: 0;
+        padding: 0;
+        margin-top: 9%;
+        max-width: 940px;
+      }
+      li {
+        list-style-type: none;
+        width: 23%;
+        min-width: 200px;
+        height: 208px;
+        background-color: lightgrey;
+        display: inline-block;
+        margin-right: 4.5%;
+        margin-bottom: 45px;
+      }
+      li:nth-child(3) {
+        margin-right: 0;
+      }
+      li:nth-child(6) {
+        margin-right: 0;
+      }
+      .album-image-picture-container {
+        height: 78%;
+      }
+      h4 {
+        text-align: center;
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 15px 0;
+      }
+  }
+  //LIGHTBOX PAGE
+
+  .lightbox-page {
+    display: none;
+    background-color: grey;
+    position: fixed;
+    padding-top: 5%;
+    width: 100%;
+    height: 100%;
+    h1 {
+      text-align: center;
+      margin: 0;
+    }
+    .go-back-button {
+      height: 45px;
+      width: 100px;
+      background-color: lightgrey;
+      display: inline-block;
+      margin-left: 45px;
+    }
+    .lightbox-image-container {
+      width: 45%;
+      max-width: 600px;
+      height: 65%;
+      max-height:600px;
+      margin: 0 auto;
+      color: red;
+      background-image: url('http://www.chinadaily.com.cn/sports/images/attachement/jpg/site1/20100722/0013729ece6b0db1ee1e38.jpg');
+    }
+  }
