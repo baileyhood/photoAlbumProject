@@ -1,4 +1,8 @@
 //GENERAL
+* {
+  box-sizing: border-box;
+}
+
 body {
   height: 100%;
 }
@@ -6,6 +10,7 @@ body {
 
 //HOMEPAGE
 .home-page {
+  // display: none;
   header {
     background-color: lightgrey;
   }
@@ -18,7 +23,8 @@ body {
 .home-wrapper {
   margin: 0 auto;
   margin-top: 50px;
-  width: 83%;
+  width: 66.1%;
+  max-width: 885px;
 
    ul{
      margin: 0;
@@ -32,6 +38,7 @@ body {
      display: inline-block;
      margin-right: 4.5%;
      margin-bottom: 45px;
+     max-width: 264.672px;
    }
    li:nth-child(3) {
      margin-right: 0;
@@ -41,6 +48,9 @@ body {
    }
    .album-image-container {
      height: 78%;
+     img {
+       width: 100%;
+     }
    }
    h3 {
      text-align: center;
@@ -144,6 +154,8 @@ aside {
       max-height:600px;
       margin: 0 auto;
       color: red;
-      background-image: url('http://www.chinadaily.com.cn/sports/images/attachement/jpg/site1/20100722/0013729ece6b0db1ee1e38.jpg');
+      img {
+        width:100%;
+      }
     }
   }
