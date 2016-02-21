@@ -80,7 +80,7 @@ aside nav h4 {
   margin: 0; }
 
 .album-wrapper {
-  padding-left: 447px; }
+  padding-left: 27%; }
 
 .album-wrapper ul {
   margin: 0;
@@ -90,7 +90,7 @@ aside nav h4 {
 
 .album-wrapper li {
   list-style-type: none;
-  width: 23%;
+  width: 28%;
   min-width: 200px;
   height: 208px;
   background-color: lightgrey;
@@ -98,13 +98,16 @@ aside nav h4 {
   margin-right: 4.5%;
   margin-bottom: 45px; }
 
-.album-wrapper li:nth-child(3) {
+.album-wrapper li .albumPhoto {
+  width: 100%; }
+
+.album-wrapper li li:nth-child(3) {
   margin-right: 0; }
 
-.album-wrapper li:nth-child(6) {
+.album-wrapper li li:nth-child(6) {
   margin-right: 0; }
 
-.album-wrapper .album-image-picture-container {
+.album-wrapper li .album-image-picture-container {
   height: 78%; }
 
 .album-wrapper h4 {

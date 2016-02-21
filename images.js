@@ -3,7 +3,7 @@ var albums = [
     albumTitle: "Album 1" ,
     albumCover: "images/album1/large/photo1_1.jpeg",
     albumRel: "album-1",
-    photos: [
+    photos:  [
       { photoName: "photo1" ,
         photoFull: "images/album1/large/photo1_1.jpeg",
       },

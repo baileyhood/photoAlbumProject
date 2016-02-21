@@ -95,7 +95,7 @@ aside {
 }
 }
   .album-wrapper {
-    padding-left: 447px;
+    padding-left: 27%;
       ul {
         margin: 0;
         padding: 0;
@@ -104,13 +104,15 @@ aside {
       }
       li {
         list-style-type: none;
-        width: 23%;
+        width: 28%;
         min-width: 200px;
         height: 208px;
         background-color: lightgrey;
         display: inline-block;
         margin-right: 4.5%;
         margin-bottom: 45px;
+        .albumPhoto {
+          width: 100%;
       }
       li:nth-child(3) {
         margin-right: 0;
@@ -120,6 +122,8 @@ aside {
       }
       .album-image-picture-container {
         height: 78%;
+      }
+
       }
       h4 {
         text-align: center;
