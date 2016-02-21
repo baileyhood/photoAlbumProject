@@ -2,6 +2,7 @@ var albums = [
   { type: "album",
     albumTitle: "Album 1" ,
     albumCover: "images/album1/large/photo1_1.jpeg",
+    albumRel: "album-1",
     photos: [
       { photoName: "photo1" ,
         photoFull: "images/album1/large/photo1_1.jpeg",
@@ -26,6 +27,7 @@ var albums = [
   { type: "album",
     albumTitle: "Album 2" ,
     albumCover: "images/album2/large/photo2_1.jpeg",
+    albumRel: "album-2",
     photos: [
       { photoName: "photo1" ,
         photoFull: "images/album2/large/photo2_1.jpeg",
@@ -50,6 +52,7 @@ var albums = [
   { type: "album",
     albumTitle: "Album 3" ,
     albumCover: "images/album3/large/photo3_1.jpeg",
+    albumRel: "album-3",
     photos: [
       { photoName: "photo1" ,
         photoFull: "images/album3/large/photo3_1.jpeg",
@@ -74,6 +77,7 @@ var albums = [
   { type: "album",
     albumTitle: "Album 4" ,
     albumCover: "images/album4/large/photo4_1.jpeg",
+    albumRel: "album-4",
     photos: [
       { photoName: "photo1" ,
         photoFull: "images/album3/large/photo4_1.jpeg",
@@ -98,6 +102,7 @@ var albums = [
   { type: "album",
     albumTitle: "Album 5" ,
     albumCover: "images/album5/large/photo5_1.jpeg",
+    albumRel: "album-5",
     photos: [
       { photoName: "photo1" ,
         photoFull: "images/album5/large/photo5_1.jpeg",
@@ -122,6 +127,7 @@ var albums = [
   { type: "album",
     albumTitle: "Album 6" ,
     albumCover: "images/album6/large/photo6_1.jpeg",
+    albumRel: "album-6",
     photos: [
       { photoName: "photo1" ,
         photoFull: "images/album6/large/photo6_1.jpeg",
