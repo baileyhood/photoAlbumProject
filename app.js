@@ -85,14 +85,14 @@ $('.navigation').children('li').on('click', function (event) {
   showPhotoAlbums(selectedPhotoAlbums);
 });
 
-//BACK HOME BUTTON
-$('.back-home-button').on('click','p',function (event){
-console.log ("Back Home Button has been clicked");
-event.preventDefault();
-$ ('.home-page').removeClass('inactive');
-$ ('.album-page').addClass('inactive');
-
-});
+// //BACK HOME BUTTON
+// $('.back-home-button').on('click','p',function (event){
+// console.log ("Back Home Button has been clicked");
+// event.preventDefault();
+// $ ('.home-page').removeClass('inactive');
+// $ ('.album-page').addClass('inactive');
+//
+// });
 
 //LIGHTBOX
 //1. Toggle to Lightbox Section
@@ -103,12 +103,10 @@ console.log("Photo click is working!");
 $ ('.lightbox-page').removeClass('inactive');
 $ ('.album-page').addClass('inactive');
 var selectedPhotos = $(this).attr('src');
-console.log("hello",selectedPhotos);
 setPhotoFull(selectedPhotos);
 });
 //2.
 var setPhotoFull = function (photofullget) {
-  console.log ("this is photofullget",photofullget);
   var photoFull = "";
     photoFull += "<div class ='lightbox-image-container'>";
     photoFull += "<img class= 'lightboxPhoto' src='" + photofullget + "'alt=''/>";
@@ -123,6 +121,7 @@ $(".back-to-album-button").on("click", function(el) {
   el.preventDefault();
   $ ('.album-page').removeClass('inactive');
   $ ('.lightbox-page').addClass('inactive');
+  $ ('.lightbox-image-container').addClass('inactive');
 });
 
 });//end of doc ready
