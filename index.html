@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>jQuery Photo Album</title>
     <meta charset="utf-8"><link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
-    <title>jQuery Photo Album</title>
+
+    <!-- JS template -->
+    <script type="text/template" id ="displayAlbumTemplate">
+    <li>
+    <div class='album-image-container'id="<%= albumRel %>">
+      <img class = 'albumPhoto' src="<%= albumCover %>" >
+    </div>
+    <h3> <%= albumTitle %> </h3>
+    </li>
+    </script>
+
   </head>
 
   <div class="main-container">

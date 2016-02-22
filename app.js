@@ -3,15 +3,17 @@ $(document).ready(function() {
 
 //ADDING PHOTOS TO HOMEPAGE
 
+function albumCoverTemplate(post) {
+  var albumTemplate = _.template($('#displayAlbumTemplate').html());
+  console.log(albumTemplate(post));
+  return albumTemplate(post);
+}
+
+
 var albumCoverPhotos = function (albumPhotoData) {
   var albumCoverArr = "";
-  albums.forEach (function (el){
-  albumCoverArr += "<li>";
-  albumCoverArr +=  "<div class='album-image-container'id='" + el.albumRel + "'>"+"<img class= 'albumPhoto' src='" + el.albumCover + "' alt=''/>" + "</div>";
-  albumCoverArr += "<h3>";
-  albumCoverArr += el.albumTitle;
-  albumCoverArr += "</h3>";
-  albumCoverArr += "</li>";
+  albums.forEach (function (albumCover){
+  albumCoverArr += albumCoverTemplate(albumCover);
 });
   $('.home-wrapper').children('ul').append(albumCoverArr);
 };
