@@ -29,7 +29,8 @@ $('.home-wrapper').children('ul').find('div').on('click', function (event) {
   showPhotoAlbums(selectedPhotoAlbums);
 });
 
-//Pulls Album Photos
+//Pulls Album Photos // using filter to create an array of images that have albumRel
+//matching the ID# (i.e. selectedPhotoAlbums)
 
 var grabPhotos = function (album_choice) {
   var emptyArr = albums.filter (function (item) {
@@ -102,18 +103,20 @@ console.log("Photo click is working!");
 $ ('.lightbox-page').removeClass('inactive');
 $ ('.album-page').addClass('inactive');
 var selectedPhotos = $(this).attr('src');
-console.log(selectedPhotos);
+console.log("hello",selectedPhotos);
 setPhotoFull(selectedPhotos);
 });
-
+//2.
 var setPhotoFull = function (photofullget) {
+  console.log ("this is photofullget",photofullget);
   var photoFull = "";
     photoFull += "<div class ='lightbox-image-container'>";
-    photoFull += "<img class= 'lightboxPhoto' src='" + photofullget + "'/>";
+    photoFull += "<img class= 'lightboxPhoto' src='" + photofullget + "'alt=''/>";
     photoFull += "</div>";
-    console.log(photoFull); return photoFull;
+    console.log(photoFull);
+    $('.lightbox-page').append(photoFull);
 };
-$('.lightbox-page').append(setPhotoFull);
+
 
 //BACK TO ALBUM
 $(".back-to-album-button").on("click", function(el) {
