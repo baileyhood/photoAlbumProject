@@ -81,28 +81,30 @@ $('.navigation').children('li').on('click', function (event) {
   event.preventDefault();
   selectedPhotoAlbums = ($(this).attr('id'));
   $('.album-wrapper').not(this).find('li').hide();
-  var photoBlah = showPhotoAlbums(selectedPhotoAlbums);
+  showPhotoAlbums(selectedPhotoAlbums);
 });
 
 //LIGHTBOX
 //1. Toggle to Lightbox Section
 
-// $('body').on("click", ".photo-list", function (event) {
-// console.log("Photo click is working!");
-// event.preventDefault();
-// $ ('.lightbox-page').removeClass('inactive');
-// $ ('.album-page').addClass('inactive');
-// var selectedPhotos = ($(this).attr('src'));
-// var selectedFull = selectedPhoto.replace(/thumb\.png/gi,"full.jpeg");
-// console.log(selectedFull);
-// setPhotoFull(selectedFull);
-// });
-//
-// var setPhotoFull = function (photofullget) {
-//   var photoFull = "";
-//   photoFull += "<div class='photoFullDiv'><img src='" + photofullget + "' /></div>";
-//   console.log(photoFull);
-// $(".photoFullView").html(photoFull);}
+$('.album-page').on("click", "img", function (event) {
+console.log("Photo click is working!");
+event.preventDefault();
+$ ('.lightbox-page').removeClass('inactive');
+$ ('.album-page').addClass('inactive');
+var selectedPhotos = ($(this).attr('src'));
+console.log(selectedPhotos);
+setPhotoFull(selectedPhotos);
+});
+
+var setPhotoFull = function (photofullget) {
+  var photoFull = "";
+    photoFull += "<div class ='lightbox-image-container'>";
+    photoFull += "<img class= 'lightboxPhoto' src='" + photofullget + "' alt=''/>";
+    photoFull += "</div>";
+    console.log(photoFull); return photoFull;
+};
+$('.lightbox-page').append(setPhotoFull);
 
 // $('.albumContent').on("click",'img', function(el) {
 //   el.preventDefault();
