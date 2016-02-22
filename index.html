@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
 
-    <!-- JS template -->
+    <!-- JS templates -->
+
+    <!-- Album Cover Template -->
     <script type="text/template" id ="displayAlbumTemplate">
     <li>
     <div class='album-image-container'id="<%= albumRel %>">
@@ -14,6 +16,26 @@
     </div>
     <h3> <%= albumTitle %> </h3>
     </li>
+    </script>
+
+    <!-- Album Photo Template -->
+    <script type="text/template" id ="displayAlbumCoverTemplate">
+     <li class = 'photo-list'>
+     <div class = 'album-image-picture-container'>
+     <div class =  "<%= photoRel %>" </div>
+     <img class= 'albumPhoto' src = "<%= photoFull %>" >
+     <h4> "<%= photoName %>" </h4>
+     </div>
+     </li>
+   </script>
+
+    <!-- Navigation Template -->
+    <script type="text/template" id="addNavigationTemplate">
+     <li id = ' <%= albumRel %> '>
+     <div class = 'navigation-link-container' id = "<%= albumRel %>" >
+     <h4>"<%=albumTitle %>"</h4>
+     </div>
+     </li>
     </script>
 
   </head>

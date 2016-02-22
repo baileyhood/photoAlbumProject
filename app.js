@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
 
-//ADDING PHOTOS TO HOMEPAGE
+////////ADDING PHOTOS TO HOMEPAGE////////
 
+//Creating function for template
 function albumCoverTemplate(post) {
   var albumTemplate = _.template($('#displayAlbumTemplate').html());
   console.log(albumTemplate(post));
   return albumTemplate(post);
 }
-
 
 var albumCoverPhotos = function (albumPhotoData) {
   var albumCoverArr = "";
@@ -17,10 +17,9 @@ var albumCoverPhotos = function (albumPhotoData) {
 });
   $('.home-wrapper').children('ul').append(albumCoverArr);
 };
-
 albumCoverPhotos(albums);
 
-//SELECTING PHOTOS ON HOMEPAGE
+////////SELECTING PHOTOS ON HOMEPAGE////////
 
 var selectedPhotoAlbums = "";
 $('.home-wrapper').children('ul').find('div').on('click', function (event) {
@@ -41,26 +40,30 @@ var grabPhotos = function (album_choice) {
   return emptyArr[0].photos;
 };
 
-//Displays Album Photos
+////////Displays Album Photos////////
+
+//Creating function for template
 
   var showPhotoAlbums = function(albumPagePhotos) {
+  var showAlbumTemplate = _.template($('#displayAlbumCoverTemplate').html());
   var displayPhotosArr = "";
   _.each(grabPhotos(selectedPhotoAlbums), function (el) {
-    displayPhotosArr += "<li class = 'photo-list'>";
-    displayPhotosArr += "<div class = 'album-image-picture-container'>";
-    displayPhotosArr += "<div class = '" + el.photoRel + "'  </div>";
-    displayPhotosArr += "<img class= 'albumPhoto' src='" + el.photoFull + "' alt=''/>";
-    displayPhotosArr += "<h4>" + el.photoName + "</h4>";
-    displayPhotosArr += "</div";
-    displayPhotosArr += "</li>";
+    displayPhotosArr += showAlbumTemplate (el);
   });
   $('.album-wrapper').children('ul').append(displayPhotosArr);
 };
 
-//NAVIGATION LINKS ON PHOTO ALBUMS' PAGES
+////////NAVIGATION LINKS ON PHOTO ALBUMS' PAGES////////
+
+
+//Creating Nav Template
+function navTemplate(post) {
+  var albumTemplate = _.template($('#addNavigationTemplate').html());
+  console.log(navTemplate(post));
+  return albumTemplate(post);
+}
 
 //1. Add Links to NAVIGATION
-
 var navigationLinks = function (albumTitleData) {
   var albumTitleArr = "";
   albums.forEach (function(el){
@@ -68,7 +71,7 @@ var navigationLinks = function (albumTitleData) {
     albumTitleArr += "<div class = 'navigation-link-container' id ='" + el.albumRel + "'>";
     albumTitleArr += "<h4>";
     albumTitleArr += el.albumTitle;
-    albumTitleArr += "<h4>";
+    albumTitleArr += "</h4>";
     albumTitleArr += "</div>";
     albumTitleArr += "</li>";
   });
@@ -118,7 +121,7 @@ var setPhotoFull = function (photofullget) {
 };
 
 
-//BACK TO ALBUM
+////////BACK TO ALBUM////////
 $(".back-to-album-button").on("click", function(el) {
   el.preventDefault();
   $ ('.album-page').removeClass('inactive');
