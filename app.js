@@ -84,15 +84,24 @@ $('.navigation').children('li').on('click', function (event) {
   showPhotoAlbums(selectedPhotoAlbums);
 });
 
+//BACK HOME BUTTON
+$('.back-home-button').on('click','p',function (event){
+console.log ("Back Home Button has been clicked");
+event.preventDefault();
+$ ('.home-page').removeClass('inactive');
+$ ('.album-page').addClass('inactive');
+
+});
+
 //LIGHTBOX
 //1. Toggle to Lightbox Section
 
-$('.album-page').on("click", "img", function (event) {
-console.log("Photo click is working!");
+$('.album-wrapper').on("click", "img", function (event) {
 event.preventDefault();
+console.log("Photo click is working!");
 $ ('.lightbox-page').removeClass('inactive');
 $ ('.album-page').addClass('inactive');
-var selectedPhotos = ($(this).attr('src'));
+var selectedPhotos = $(this).attr('src');
 console.log(selectedPhotos);
 setPhotoFull(selectedPhotos);
 });
@@ -100,51 +109,17 @@ setPhotoFull(selectedPhotos);
 var setPhotoFull = function (photofullget) {
   var photoFull = "";
     photoFull += "<div class ='lightbox-image-container'>";
-    photoFull += "<img class= 'lightboxPhoto' src='" + photofullget + "' alt=''/>";
+    photoFull += "<img class= 'lightboxPhoto' src='" + photofullget + "'/>";
     photoFull += "</div>";
     console.log(photoFull); return photoFull;
 };
 $('.lightbox-page').append(setPhotoFull);
 
-// $('.albumContent').on("click",'img', function(el) {
-//   el.preventDefault();
-//   console.log("CLICK");
-//   $("section").removeClass("active");
-//   $(".photoView").addClass("active");
-//   var selectedPhoto = $(this).attr("src");
-//   var selectedFull = selectedPhoto.replace(/thumb\.png/gi,"full.jpeg");
-//   console.log(selectedFull);
-//   setPhotoFull(selectedFull);
-// });
-// var setPhotoFull = function (photofullget) {
-//   var photoFull = "";
-//     photoFull += "<div class='photoFullDiv'><img src='" + photofullget + "' /></div>";
-//     console.log(photoFull);
-//   $(".photoFullView").html(photoFull);
-// };
+//BACK TO ALBUM
+$(".back-to-album-button").on("click", function(el) {
+  el.preventDefault();
+  $ ('.album-page').removeClass('inactive');
+  $ ('.lightbox-page').addClass('inactive');
+});
 
-
-
-// var filterLargePhotos = function (photo_choice) {
-//   var emptyArr = albums.filter (function (item,idx) {
-//     console.log (item.photos[0].photoRel);
-//     return item.photos[0].photoRel === photo_choice;
-//   });
-//   return emptyArr[0].photos;
-// };
-//
-// //for the above filter function, we are filtering out any
-// // photoRel property that doesn't match the class-name and then putting
-// //objects into separate array.
-//
-// var showLightbox = function (rel) {
-//   varDisplayLightbox = "";
-//   _.each(filterLargePhotos(rel), function (el) {
-//   varDisplayLightbox += "<h1>" + el.photoName + "</h1>";
-//   varDisplayLightbox += "<div class ='lightbox-image-container'>";
-//   varDisplayLightbox += "<img class= 'lightboxPhoto' src='" + el.photoFull + "' alt=''/>";
-//   varDisplayLightbox +="</div>";
-// });
-// $('.lightbox-page').append(varDisplayLightbox);
-// };
 });//end of doc ready
