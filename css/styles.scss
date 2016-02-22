@@ -14,7 +14,7 @@ body {
 //HOMEPAGE
 .home-page {
   header {
-    background-color: lightgrey;
+    background-color: #F3F3F3;
   }
   h1 {
     text-align: center;
@@ -56,8 +56,8 @@ body {
    }
    h3 {
      text-align: center;
-     background-color: black;
-     color: white;
+     background-color: #F3F3F3;
+     color: grey;
      margin: 0;
      padding: 15px 0;
 
@@ -68,7 +68,7 @@ body {
 
 }
 aside {
-  background-color: lightgrey;
+  background-color: #F3F3F3;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -84,13 +84,19 @@ aside {
         margin-top: 40%;
       }
       li {
-        background-color: grey;
+        background-color: #E0E0E0;
         height: 45px;
         margin-bottom: 25px;
+        padding-top: 14px;
+        color: grey;
       }
+
       h4 {
         text-align: center;
         margin: 0;
+      }
+      li:hover {
+        background-color: #D4D4D4;
       }
 }
 }
@@ -127,8 +133,8 @@ aside {
       }
       h4 {
         text-align: center;
-        background-color: black;
-        color: white;
+        background-color: #E0E0E0;
+        color: grey;
         margin: 0;
         padding: 15px 0;
       }

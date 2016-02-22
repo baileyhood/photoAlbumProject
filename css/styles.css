@@ -8,7 +8,7 @@ body {
   display: none; }
 
 .home-page header {
-  background-color: lightgrey; }
+  background-color: #F3F3F3; }
 
 .home-page h1 {
   text-align: center;
@@ -49,13 +49,13 @@ body {
 
 .home-wrapper h3 {
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: #F3F3F3;
+  color: grey;
   margin: 0;
   padding: 15px 0; }
 
 aside {
-  background-color: lightgrey;
+  background-color: #F3F3F3;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -71,13 +71,18 @@ aside nav ul {
   margin-top: 40%; }
 
 aside nav li {
-  background-color: grey;
+  background-color: #E0E0E0;
   height: 45px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  padding-top: 14px;
+  color: grey; }
 
 aside nav h4 {
   text-align: center;
   margin: 0; }
+
+aside nav li:hover {
+  background-color: #D4D4D4; }
 
 .album-wrapper {
   padding-left: 27%; }
@@ -112,8 +117,8 @@ aside nav h4 {
 
 .album-wrapper h4 {
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: #E0E0E0;
+  color: grey;
   margin: 0;
   padding: 15px 0; }
 
