@@ -89,7 +89,6 @@ setPhotoFull(selectedPhotos);
 });
 //2.
 var setPhotoFull = function (photofullget) {
-  var enlargePhotoTemplate = _.template($('#addNavigationTemplate').html());
   var photoFull = "";
     photoFull += "<div class ='lightbox-image-container'>";
     photoFull += "<img class= 'lightboxPhoto' src='" + photofullget + "'alt=''/>";
