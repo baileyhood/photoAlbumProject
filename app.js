@@ -3,14 +3,9 @@ $(document).ready(function() {
 
 ////////ADDING PHOTOS TO HOMEPAGE////////
 
-//Creating function for template
-function albumCoverTemplate(post) {
-  var albumTemplate = _.template($('#displayAlbumTemplate').html());
-  console.log(albumTemplate(post));
-  return albumTemplate(post);
-}
-
+//Adding photos dynamically on homepage using albumCoverTemplate
 var albumCoverPhotos = function (albumPhotoData) {
+  var albumCoverTemplate = _.template($('#displayAlbumTemplate').html());
   var albumCoverArr = "";
   albums.forEach (function (albumCover){
   albumCoverArr += albumCoverTemplate(albumCover);
@@ -30,7 +25,7 @@ $('.home-wrapper').children('ul').find('div').on('click', function (event) {
   showPhotoAlbums(selectedPhotoAlbums);
 });
 
-//Pulls Album Photos // using filter to create an array of images that have albumRel
+//Pulls Album Photos --> using filter to create an array of images that have albumRel
 //matching the ID# (i.e. selectedPhotoAlbums)
 
 var grabPhotos = function (album_choice) {
@@ -40,9 +35,7 @@ var grabPhotos = function (album_choice) {
   return emptyArr[0].photos;
 };
 
-////////Displays Album Photos////////
-
-//Creating function for template
+////////DISPLAYS ALBUM PHOTOS////////
 
   var showPhotoAlbums = function(albumPagePhotos) {
   var showAlbumTemplate = _.template($('#displayAlbumCoverTemplate').html());
@@ -55,16 +48,9 @@ var grabPhotos = function (album_choice) {
 
 ////////NAVIGATION LINKS ON PHOTO ALBUMS' PAGES////////
 
-
-//Creating Nav Template
-function navTemplate(post) {
-  var albumTemplate = _.template($('#addNavigationTemplate').html());
-  console.log(navTemplate(post));
-  return albumTemplate(post);
-}
-
 //1. Add Links to NAVIGATION
 var navigationLinks = function (albumTitleData) {
+  var navTemplate = _.template($('#addNavigationTemplate').html());
   var albumTitleArr = "";
   albums.forEach (function(el){
     albumTitleArr += "<li id = '" + el.albumRel + "'>";
@@ -90,15 +76,6 @@ $('.navigation').children('li').on('click', function (event) {
   showPhotoAlbums(selectedPhotoAlbums);
 });
 
-// //BACK HOME BUTTON
-// $('.back-home-button').on('click','p',function (event){
-// console.log ("Back Home Button has been clicked");
-// event.preventDefault();
-// $ ('.home-page').removeClass('inactive');
-// $ ('.album-page').addClass('inactive');
-//
-// });
-
 //LIGHTBOX
 //1. Toggle to Lightbox Section
 
@@ -112,6 +89,7 @@ setPhotoFull(selectedPhotos);
 });
 //2.
 var setPhotoFull = function (photofullget) {
+  var enlargePhotoTemplate = _.template($('#addNavigationTemplate').html());
   var photoFull = "";
     photoFull += "<div class ='lightbox-image-container'>";
     photoFull += "<img class= 'lightboxPhoto' src='" + photofullget + "'alt=''/>";

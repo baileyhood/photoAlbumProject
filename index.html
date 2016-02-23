@@ -24,7 +24,7 @@
      <div class = 'album-image-picture-container'>
      <div class =  "<%= photoRel %>" </div>
      <img class= 'albumPhoto' src = "<%= photoFull %>" >
-     <h4> "<%= photoName %>" </h4>
+     <h4> <%= photoName %> </h4>
      </div>
      </li>
    </script>
@@ -33,10 +33,17 @@
     <script type="text/template" id="addNavigationTemplate">
      <li id = ' <%= albumRel %> '>
      <div class = 'navigation-link-container' id = "<%= albumRel %>" >
-     <h4>"<%=albumTitle %>"</h4>
+     <h4><%=albumTitle %></h4>
      </div>
      </li>
     </script>
+
+    <!-- Enlarge -->
+    <script type="text/template" id="enlargePhotoTemplate">
+      <div class ='lightbox-image-container'>";
+      <img class= 'lightboxPhoto' src=  "<%= photofullget %>" >";
+      </div>
+  </script>
 
   </head>
 
